@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav"
+    app:startDestination="@id/usersScreen">
+
+    <fragment
+        android:id="@+id/usersScreen"
+        android:name="com.example.chatapp.view.users.UsersScreen"
+        android:label="UsersScreen"
+        tools:layout="@layout/users_screen" >
+        <action
+            android:id="@+id/action_usersScreen_to_sendMassage"
+            app:destination="@id/sendMassage" />
+        <action
+            android:id="@+id/action_usersScreen_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendMassage"
+        android:name="com.example.chatapp.view.sendMassage.SendMassage"
+        android:label="SendMassage"
+        tools:layout="@layout/send_massage_screen" />
+    <fragment
+        android:id="@+id/settings"
+        tools:layout="@layout/settings"
+        android:name="com.example.chatapp.view.sittings.Settings"
+        android:label="Settings" />
+</navigation>

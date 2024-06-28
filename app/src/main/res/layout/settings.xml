@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_image_root"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="25dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/user_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/use_avatar" />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/user_name"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_image_root"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/user_image_root"
+        android:background="@android:color/transparent"
+        android:hint="Name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_alignStart="@+id/user_name"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:hint="Last name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/last_name"
+        android:layout_alignStart="@+id/user_name"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:hint="Email"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_email"
+        android:layout_alignStart="@+id/user_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16sp"
+        android:backgroundTint="@color/black"
+        android:text="Logout"
+        android:textColor="@color/white" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>
